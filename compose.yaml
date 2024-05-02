@@ -1,0 +1,9 @@
+name: "fastapi"
+services:
+  api:
+    build: #image will build through it
+      context: ./ #path of dockerfile
+      dockerfile: Dockerfile  #name of docker file
+    # container_name: mydevcontainer #it will run container, if we dont provide container name it will automatically set it
+    ports: #use when we publish the port
+      - 8000:8000 # in json it is array here we denoted array with hypen - sign (index), this is what look like in json "expose":["8000:8000"],
